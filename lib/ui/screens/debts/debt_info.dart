@@ -132,7 +132,7 @@ class _clsDebtInfoScreenState extends State<clsDebtInfoScreen> {
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        padding: EdgeInsets.symmetric(vertical: 7, horizontal: 20),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +168,7 @@ class _clsDebtInfoScreenState extends State<clsDebtInfoScreen> {
                         ).textTheme.bodyMedium!.copyWith(color: Colors.grey),
                       ),
 
-                      SizedBox(height: 4),
+                      SizedBox(height: 3),
                       Visibility(
                         visible:
                             _debt.person != null && _debt.person!.phone != null,
@@ -193,8 +193,8 @@ class _clsDebtInfoScreenState extends State<clsDebtInfoScreen> {
               ),
             ],
           ),
-          SizedBox(height: 10),
 
+          // SizedBox(height: 2),
           Row(
             children: [
               Text(
@@ -281,7 +281,7 @@ class _clsDebtInfoScreenState extends State<clsDebtInfoScreen> {
             ),
           ),
 
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           Text(
             '   ' + 'payments'.tr(),
             style: Theme.of(context).textTheme.bodyMedium,
@@ -314,7 +314,7 @@ class _clsDebtInfoScreenState extends State<clsDebtInfoScreen> {
                     // shrinkWrap: true,
                   ),
           ),
-          SizedBox(height: 25),
+          SizedBox(height: 7),
           Container(
             height: 120,
             padding: EdgeInsets.all(5),

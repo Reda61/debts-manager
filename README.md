@@ -6,9 +6,10 @@ A mobile application to manage debts and payments between people, built with Flu
 
 ## 📱 Screenshots
 
-![Screenshot 1](screenshots/a.jpeg)
-![Screenshot 2](screenshots/b.jpeg)
-![Screenshot 3](screenshots/c.jpeg)
+
+<img src="screenshots/a.jpeg" width="200"/> <img src="screenshots/b.jpeg" width="200"/> <img src="screenshots/c.jpeg" width="200"/> <img src="screenshots/d.jpeg" width="200"/>
+<img src="screenshots/e.jpeg" width="200"/> <img src="screenshots/f.jpeg" width="200"/> <img src="screenshots/g.jpeg" width="200"/> <img src="screenshots/h.jpeg" width="200"/>
+<img src="screenshots/i.jpeg" width="200"/> <img src="screenshots/j.jpeg" width="200"/> <img src="screenshots/k.jpeg" width="200"/> <img src="screenshots/l.jpeg" width="200"/>
 ![Screenshot 4](screenshots/d.jpeg)
 ![Screenshot 5](screenshots/e.jpeg)
 ![Screenshot 6](screenshots/f.jpeg)

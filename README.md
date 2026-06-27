@@ -6,18 +6,18 @@ A mobile application to manage debts and payments between people, built with Flu
 
 ## 📱 Screenshots
 
-![Screenshot 1](screenshots/a.png)
-![Screenshot 2](screenshots/b.png)
-![Screenshot 3](screenshots/c.png)
-![Screenshot 4](screenshots/d.png)
-![Screenshot 5](screenshots/e.png)
-![Screenshot 6](screenshots/f.png)
-![Screenshot 7](screenshots/g.png)
-![Screenshot 8](screenshots/h.png)
-![Screenshot 2](screenshots/i.png)
-![Screenshot 2](screenshots/j.png)
-![Screenshot 2](screenshots/k.png)
-![Screenshot 2](screenshots/l.png)
+![Screenshot 1](screenshots/a.jpeg)
+![Screenshot 2](screenshots/b.jpeg)
+![Screenshot 3](screenshots/c.jpeg)
+![Screenshot 4](screenshots/d.jpeg)
+![Screenshot 5](screenshots/e.jpeg)
+![Screenshot 6](screenshots/f.jpeg)
+![Screenshot 7](screenshots/g.jpeg)
+![Screenshot 8](screenshots/h.jpeg)
+![Screenshot 2](screenshots/i.jpeg)
+![Screenshot 2](screenshots/j.jpeg)
+![Screenshot 2](screenshots/k.jpeg)
+![Screenshot 2](screenshots/l.jpeg)
 
 
 

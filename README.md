@@ -14,10 +14,10 @@ A mobile application to manage debts and payments between people, built with Flu
 ![Screenshot 6](screenshots/f.jpeg)
 ![Screenshot 7](screenshots/g.jpeg)
 ![Screenshot 8](screenshots/h.jpeg)
-![Screenshot 2](screenshots/i.jpeg)
-![Screenshot 2](screenshots/j.jpeg)
-![Screenshot 2](screenshots/k.jpeg)
-![Screenshot 2](screenshots/l.jpeg)
+![Screenshot 9](screenshots/i.jpeg)
+![Screenshot 10](screenshots/j.jpeg)
+![Screenshot 11](screenshots/k.jpeg)
+![Screenshot 12](screenshots/l.jpeg)
 
 
 

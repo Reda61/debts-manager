@@ -7,19 +7,9 @@ A mobile application to manage debts and payments between people, built with Flu
 ## 📱 Screenshots
 
 
-<img src="screenshots/a.jpeg" width="200"/> <img src="screenshots/b.jpeg" width="200"/> <img src="screenshots/c.jpeg" width="200"/> <img src="screenshots/d.jpeg" width="200"/>
-<img src="screenshots/e.jpeg" width="200"/> <img src="screenshots/f.jpeg" width="200"/> <img src="screenshots/g.jpeg" width="200"/> <img src="screenshots/h.jpeg" width="200"/>
-<img src="screenshots/i.jpeg" width="200"/> <img src="screenshots/j.jpeg" width="200"/> <img src="screenshots/k.jpeg" width="200"/> <img src="screenshots/l.jpeg" width="200"/>
-![Screenshot 4](screenshots/d.jpeg)
-![Screenshot 5](screenshots/e.jpeg)
-![Screenshot 6](screenshots/f.jpeg)
-![Screenshot 7](screenshots/g.jpeg)
-![Screenshot 8](screenshots/h.jpeg)
-![Screenshot 9](screenshots/i.jpeg)
-![Screenshot 10](screenshots/j.jpeg)
-![Screenshot 11](screenshots/k.jpeg)
-![Screenshot 12](screenshots/l.jpeg)
-
+<img src="screenshots/1.jpeg" width="200"/> <img src="screenshots/2.jpeg" width="200"/> <img src="screenshots/3.jpeg" width="200"/> <img src="screenshots/4.jpeg" width="200"/>
+<img src="screenshots/5.jpeg" width="200"/> <img src="screenshots/6.jpeg" width="200"/> <img src="screenshots/7.jpeg" width="200"/> <img src="screenshots/8.jpeg" width="200"/>
+<img src="screenshots/9.jpeg" width="200"/> <img src="screenshots/10.jpeg" width="200"/> <img src="screenshots/11.jpeg" width="200"/> <img src="screenshots/12.jpeg" width="200"/>
 
 
 

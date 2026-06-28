@@ -3,6 +3,6 @@ class AppConstants {
   static int currentUserID = -1;
   static String? currentUserEmail;
 
-  // Your_Server_IP ---->
-  static const String serverUrl = 'http://192.168.0.196:5036/api';
+  // Privet ---->
+  static const String serverUrl = 'http://Privet/api';
 }

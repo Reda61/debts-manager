@@ -3,6 +3,6 @@ class AppConstants {
   static int currentUserID = -1;
   static String? currentUserEmail;
 
-  // Privet ---->
+  Privet ---->
   static const String serverUrl = 'http://Privet/api';
 }

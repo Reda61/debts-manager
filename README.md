@@ -45,3 +45,11 @@ A mobile application to manage debts and payments between people, built with Flu
 ## 👨‍💻 Developer
 
 **Mohammed Reda** – Flutter & ASP.NET Developer
+
+## ⚠️ Note
+
+The API URL is private and not included in this repository.
+
+To run the project, configure your own API URL and SQL Server connection.
+
+A database script is included to help you set up the required database.

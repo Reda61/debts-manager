@@ -50,6 +50,4 @@ A mobile application to manage debts and payments between people, built with Flu
 
 The API URL is private and not included in this repository.
 
-To run the project, configure your own API URL and SQL Server connection.
-
-A database script is included to help you set up the required database.
+To run the project, configure your own API URL.

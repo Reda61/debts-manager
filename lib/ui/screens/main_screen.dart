@@ -23,6 +23,23 @@ class _clsMainScreenState extends State<clsMainScreen> {
     clsDebtsScreen(), // Placeholder for Debts content
   ];
 
+  //*sync data with server
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    if (AppConstants.currentUserID < 0) return;
+    ClsSyncFunctions.startSyncTimer(context);
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    if (AppConstants.currentUserID < 0) return;
+    ClsSyncFunctions.stopSyncTimer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

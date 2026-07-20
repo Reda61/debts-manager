@@ -107,7 +107,20 @@ class _clsDebtsScreenState extends State<clsDebtsScreen> {
             ),
           ),
           body: RefreshIndicator(
-            onRefresh: () async {},
+            onRefresh: () async {
+              //*sync data with server
+              if (AppConstants.currentUserID < 0) {
+                ClsAppDialog.showInternetStatusDialog(
+                  context,
+                  showMessage: 'sign_in_for_sync',
+                );
+                return;
+              }
+              await ClsSyncFunctions.onSyncRefresh(
+                context,
+                isReloadCircleRefresh: true,
+              );
+            },
             child: Consumer<clsDebtProvider>(
               builder: (context, proDebts, _) {
                 if (!proDebts.Debts.isEmpty) {

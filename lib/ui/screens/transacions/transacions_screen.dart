@@ -58,6 +58,7 @@ class _clsTransactionsScreenState extends State<ClsTransacionsScreen> {
               RefreshIndicator(
                 onRefresh: () async {
                   //*sync data with server
+
                   if (AppConstants.currentUserID < 0) {
                     ClsAppDialog.showInternetStatusDialog(
                       context,

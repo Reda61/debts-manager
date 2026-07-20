@@ -16,6 +16,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
+  //*sync data with server
+  await ClsAuthService.initialize();
+
   runApp(
     EasyLocalization(
       supportedLocales: [Locale('ar'), Locale('en')],

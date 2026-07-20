@@ -42,13 +42,6 @@ class _clsMainScreenState extends State<clsMainScreen> {
           style: Theme.of(context).textTheme.titleMedium,
         ),
         actions: [
-          TextButton(
-            onPressed: () {
-              //For testing commit in master branch
-            },
-            child: Text('Test'),
-          ),
-          SizedBox(width: 10),
           IconButton(
             onPressed: () async {
               await Navigator.pushNamed(

@@ -42,7 +42,20 @@ class _clsHomeScreenState extends State<clsHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      onRefresh: () async {},
+      onRefresh: () async {
+        //*sync data with server
+        if (AppConstants.currentUserID < 0) {
+          ClsAppDialog.showInternetStatusDialog(
+            context,
+            showMessage: 'sign_in_for_sync',
+          );
+          return;
+        }
+        await ClsSyncFunctions.onSyncRefresh(
+          context,
+          isReloadCircleRefresh: true,
+        );
+      },
 
       child: Container(
         child: ListView(

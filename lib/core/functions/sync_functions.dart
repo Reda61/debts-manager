@@ -78,4 +78,25 @@ class ClsSyncFunctions {
     print("get All Transactions-----------------------------------------");
     print(await clsTransactions_data.getAllTransactions());
   }
+
+  //*sync timer
+  static Timer? _syncTimer;
+  static void startSyncTimer(BuildContext context) {
+    void scheduleNext() {
+      _syncTimer = Timer(Duration(seconds: 40), () async {
+        bool hasInternet = await ClsNetworkFunctions.hasInternet();
+        if (hasInternet) {
+          await onSyncRefresh(context, isReloadCircleRefresh: false);
+        }
+        scheduleNext();
+      });
+    }
+
+    scheduleNext();
+  }
+
+  static void stopSyncTimer() {
+    _syncTimer?.cancel();
+    _syncTimer = null;
+  }
 }

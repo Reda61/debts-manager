@@ -79,9 +79,124 @@ class _clsSettingsScreenState extends State<clsSettingsScreen> {
             ),
 
             Divider(color: Colors.grey, thickness: 1, height: 20),
+            //*sync data with server
+            Text(
+              textAlign: TextAlign.center,
+              "authentication".tr(),
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            SizedBox(height: 10),
+            Visibility(
+              visible: AppConstants.currentUserID != -1,
+              child: Text(
+                textAlign: TextAlign.center,
+                "your_email".tr() + "  : ${AppConstants.currentUserEmail}",
+              ),
+            ),
+            SizedBox(height: 10),
+            _isLoading
+                ? Container(
+                    margin: EdgeInsets.symmetric(horizontal: 142),
+                    child: const CircularProgressIndicator(),
+                  )
+                : ElevatedButton(
+                    onPressed: _handleSignIn,
+                    child: Text('continue_with_google'.tr()),
+                  ),
+            SizedBox(height: 10),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 85),
+              child: Visibility(
+                visible: AppConstants.currentUserID != -1,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    ClsAppDialog.showActionConfirm(
+                      context,
+                      onConfirm: () async {
+                        await ClsAuthService.signOut();
+                        await ClsAuthData.clearDataAuth;
+                        AppConstants.currentUserID = -1;
+                        AppConstants.currentUserEmail = null;
+                        ClsSyncFunctions.stopSyncTimer();
+                        // print(AppConstants.currentUserID);
+                        setState(() {});
+                      },
+                    );
+                  },
+                  child: Text(
+                    'log_out'.tr(),
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+              ),
+            ),
+            Divider(color: Colors.grey, thickness: 1, height: 20),
           ],
         ),
       ),
     );
+  }
+
+  //*sync data with server
+  Future<void> _handleSignIn() async {
+    setState(() => _isLoading = true);
+    try {
+      if (!await ClsNetworkFunctions.hasInternet()) {
+        if (mounted) {
+          ClsAppDialog.showInternetStatusDialog(
+            context,
+            showMessage: 'no_net_connection',
+          );
+        }
+        return;
+      }
+      final user = await ClsAuthService.signIn();
+      if (user == null) {
+        return;
+      }
+      int? newUserID = await ClsUserApiService.postUser(
+        user.id,
+        user.email,
+        user.displayName,
+      ).timeout(Duration(seconds: 15));
+      // await ClsAuthData.clearDataAuth;
+      if (newUserID == null) {
+        if (mounted) {
+          ClsAppDialog.showInternetStatusDialog(
+            context,
+            showMessage: "no_response_server",
+          );
+        }
+        return;
+      }
+      if (AppConstants.currentUserID != -1) {
+        await ClsDataBaseFuncions.clearLocalDataBase();
+      }
+      if (mounted) {
+        await ClsDataBaseFuncions.refreshMainScreen(context);
+      }
+      AppConstants.currentUserID = newUserID!;
+      await ClsAuthData.saveUserID(newUserID);
+      AppConstants.currentUserEmail = user.email;
+      await ClsAuthData.saveEmailUser(user.email);
+      ClsSyncFunctions.startSyncTimer(context);
+      setState(() {});
+    } on TimeoutException {
+      if (mounted) {
+        ClsAppDialog.showInternetStatusDialog(
+          context,
+          showMessage: "no_response_server",
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ClsAppDialog.showInternetStatusDialog(
+          context,
+          showMessage: "something_wrong",
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
   }
 }

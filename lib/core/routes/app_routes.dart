@@ -1,4 +1,5 @@
 import 'package:expenses4/ui/screens/about/about_screen.dart';
+import 'package:expenses4/ui/screens/about/support_screen.dart';
 import 'package:expenses4/ui/screens/debts/add_edit_debt_screen.dart';
 import 'package:expenses4/ui/screens/debts/debt_info_screen.dart';
 import 'package:expenses4/ui/screens/debts/debts_screen.dart';
@@ -30,5 +31,6 @@ class AppRoutes {
     'transactionsScreen': (context) => ClsTransacionsScreen(),
     'settingsScreen': (context) => clsSettingsScreen(),
     'aboutScreen': (context) => ClsAboutScreen(),
+    'supportScreen': (context) => ClsSupportScreen(),
   };
 }

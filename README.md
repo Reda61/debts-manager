@@ -45,3 +45,7 @@ A mobile application to manage debts and payments between people, built with Flu
 ## 👨‍💻 Developer
 
 **Mohammed Reda** – Flutter & ASP.NET Developer
+
+## ⚠️ Note
+
+The API URL is private and not included in this repository.
